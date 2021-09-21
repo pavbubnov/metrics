@@ -11,5 +11,13 @@ services:
       monitoring:
         aliases:
           - prometheus
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    networks:
+      monitoring:
+        aliases:
+          - grafana
 networks:
   monitoring:
